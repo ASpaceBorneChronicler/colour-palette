@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h1 class="display-4">Image Color Palette Generator</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Image Upload -->
+                    <div class="mb-3">
+                        <label for="imageUpload" class="form-label">Upload an Image</label>
+                        <input class="form-control" type="file" id="imageUpload" accept="image/*">
+                    </div>
+
+                    <!-- Image Preview -->
+                    <div class="text-center mb-3 d-flex justify-content-center">
+                        <img id="image-preview" src="" class="img-fluid hide" alt="Image Preview">
+                    </div>
+
+                    <!-- Color Palette -->
+                    <div id="color-palette" class="color-list color-list--color-actions">
+                        <!-- Color items will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copied Alert -->
+    <div id="copied-alert" class="alert alert-success" role="alert">
+        Color copied to clipboard!
+    </div>
+</div>
+{% endblock %}
